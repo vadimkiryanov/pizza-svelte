@@ -1,13 +1,13 @@
-<script>
+<script lang="ts">
   import { page } from '$app/stores';
   import logo from '$lib/images/svelte-logo.svg';
   import github from '$lib/images/github.svg';
 </script>
 
 <div class="bg-base-200">
-  <div class="navbar container mx-auto">
+  <div class="container mx-auto navbar">
     <div class="flex-1">
-      <a href="/" class="btn btn-ghost normal-case text-xl">
+      <a href="/" class="text-xl normal-case btn btn-ghost">
         <img class="w-8" src="https://react-market-ashen.vercel.app/static/media/pizza-logo.56ac87032d8f6fdf863326acd06c0d97.svg" />
 
         <span>Pizza Jenkins</span></a
@@ -17,7 +17,7 @@
       <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost btn-circle">
           <div class="indicator">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"
               ><path
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -30,7 +30,7 @@
         </label>
         <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-base-100 shadow">
           <div class="card-body">
-            <span class="font-bold text-lg">8 Items</span>
+            <span class="text-lg font-bold">8 Items</span>
             <span class="text-info">Subtotal: $999</span>
             <div class="card-actions">
               <a href="/basket" class="btn btn-primary btn-block">View cart</a>
@@ -59,7 +59,7 @@
   </div>
 </div>
 
-<!--   <header class="flex justify-center items-center mt-4">
+<!--   <header class="flex items-center justify-center mt-4">
   
   
   

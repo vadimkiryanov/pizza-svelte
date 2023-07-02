@@ -4,9 +4,8 @@
   import Login from '../components/Login.svelte';
   import PizzasBoard from '../components/PizzasBoard.svelte';
 
-  const incrementF = (e: any) => {
-    alert(e.detail.count);
-  };
+  export let data;
+  const dataValue = data.body;
 </script>
 
 <svelte:head>
@@ -16,7 +15,7 @@
 
 <section class="flex flex-col justify-center items-center flex-1">
   <!-- <Login /> -->
-  <PizzasBoard />
+  <PizzasBoard data={dataValue} />
 </section>
 
 <style>

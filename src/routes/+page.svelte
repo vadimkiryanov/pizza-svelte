@@ -5,7 +5,14 @@
   import PizzasBoard from '../components/PizzasBoard.svelte';
 
   export let data;
-  const dataValue = data.body;
+  const dataPizzas = data.body.items;
+  const meta = data.body.meta;
+
+  let currentPage = 0;
+
+  const setPage = (page: number) => {
+    currentPage = page;
+  };
 </script>
 
 <svelte:head>
@@ -15,7 +22,13 @@
 
 <section class="flex flex-col justify-center items-center flex-1">
   <!-- <Login /> -->
-  <PizzasBoard data={dataValue} />
+  <PizzasBoard data={dataPizzas} />
+
+  <div class="join">
+    {#each [...new Array(meta?.total_pages)] as elem, i (i)}
+      <button on:click={() => setPage(i)} class={`${currentPage === i ? 'btn-active' : ''} join-item btn`}>{i + 1}</button>
+    {/each}
+  </div>
 </section>
 
 <style>

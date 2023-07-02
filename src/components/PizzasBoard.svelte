@@ -1,8 +1,8 @@
 <script lang="ts">
+  import type { IPizzaItems } from '../store/pizzas/types';
   import CardPizza from './CardPizza.svelte';
 
-  export let data: any[];
-  console.log({ data });
+  export let data:IPizzaItems[];
 </script>
 
 <div class="grid grid-cols-4 auto-rows-max gap-10 p-10">

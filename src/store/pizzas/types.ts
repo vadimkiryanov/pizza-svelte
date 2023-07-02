@@ -1,4 +1,4 @@
-export interface IPizzasStore {
+export interface IPizzaItems {
   id: string;
   imageUrl: string;
   title: string;
@@ -9,4 +9,18 @@ export interface IPizzasStore {
   rating: number;
 
   status: string;
+}
+
+type TPizzaMeta = {
+  current_page: number;
+  per_page: number;
+  remaining_count: number;
+  total_items: number;
+  total_pages: number;
+};
+
+export interface IPizzasStore {
+  items: IPizzaItems[];
+  meta?: TPizzaMeta;
+  status?: 'loading' | 'success';
 }
